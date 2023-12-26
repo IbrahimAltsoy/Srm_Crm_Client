@@ -25,7 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "@angular/material/prebuilt-themes/purple-green.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "SF03_CRM:build:production"
+              "buildTarget": "SF03_CRM:build:production"
             },
             "development": {
-              "browserTarget": "SF03_CRM:build:development"
+              "buildTarget": "SF03_CRM:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SF03_CRM:build"
+            "buildTarget": "SF03_CRM:build"
           }
         },
         "test": {
