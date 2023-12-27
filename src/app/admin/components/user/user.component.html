@@ -1,1 +1,13 @@
-<p>user works!</p>
+<!-- user.component.html -->
+
+<div *ngIf="customers">
+  <h2>Customer List</h2>
+  <ul>
+    <li *ngFor="let customer of customers">
+      {{ customer.id }} - {{ customer.identityNumber }} - {{ customer.companyName }}
+    </li>
+  </ul>
+  <div>
+    <button *ngFor="let pageNo of pageList" (click)="onPageChange(pageNo)">{{ pageNo }}</button>
+  </div>
+</div>

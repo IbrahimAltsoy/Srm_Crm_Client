@@ -1,0 +1,40 @@
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="identityNumber">
+      <th mat-header-cell *matHeaderCellDef> identityNumber </th>
+      <td mat-cell *matCellDef="let element"> {{element.identityNumber}} </td>
+    </ng-container>
+    <ng-container matColumnDef="companyName">
+      <th mat-header-cell *matHeaderCellDef> companyName </th>
+      <td mat-cell *matCellDef="let element"> {{element.companyName}} </td>
+    </ng-container>
+
+
+
+    <!-- <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <td  mat-cell *matCellDef="let element" appDelete [id]="element.id" controller="customer"> </td>
+    </ng-container>
+    <ng-container matColumnDef="update">
+      <th mat-header-cell *matHeaderCellDef> Update </th>
+      <td mat-cell *matCellDef="let element"> <button mat-mini-fab color="accent" style="height: 25px; width: 25px;"></button></td>
+    </ng-container> -->
+
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator (page)="pageChange()"
+  [pageSizeOptions]="[5, 10, 15]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>
+
+<mat-icon>update</mat-icon>

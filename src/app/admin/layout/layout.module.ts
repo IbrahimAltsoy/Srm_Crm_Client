@@ -7,7 +7,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HidebarComponent } from './components/hidebar/hidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
     CommonModule,
     ComponentsModule,
     RouterModule,
-    MatSidenavModule
+    MatSidenavModule,MatListModule
   ], exports:[
     LayoutComponent
   ]

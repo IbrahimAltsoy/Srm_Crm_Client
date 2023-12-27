@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutModule } from './layout/layout.module';
 import { ComponentsModule } from './components/components.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 
@@ -14,7 +15,7 @@ import { ComponentsModule } from './components/components.module';
 
   ],
   imports: [
-    CommonModule,LayoutModule,ComponentsModule
+    CommonModule,LayoutModule,ComponentsModule,MatSidenavModule
   ]
 })
 export class AdminModule { }
