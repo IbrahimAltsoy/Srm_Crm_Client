@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ReadComponent } from './read/read.component';
 
 @Component({
   selector: 'app-customer',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent {
+
+
 
 }
