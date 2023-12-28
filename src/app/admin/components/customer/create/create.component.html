@@ -1,0 +1,15 @@
+<mat-form-field class="create-input-top" style="padding-top: 20px; width: 90%;">
+  <input type="hidden" #txtId>
+  <mat-label>Identity No</mat-label>
+  <input matInput type="text" #txtIdentityNumber>
+</mat-form-field>
+<mat-form-field class="create-input">
+  <mat-label>Şirket Adı</mat-label>
+  <input matInput type="text"#txtCompanyName>
+</mat-form-field>
+
+
+<button mat-raised-button color="primary" (click)="create(txtIdentityNumber, txtCompanyName)">Create Product</button>
+<p>create</p>
+
+

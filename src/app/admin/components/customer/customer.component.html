@@ -1,11 +1,7 @@
-<mat-drawer-container class="customer-container">
-  <mat-drawer mode="side" opened>
-    <!-- Drawer içeriği buraya gelecek -->
-    <!-- Örneğin, menü içeriği veya başka bir içerik -->
-  </mat-drawer>
 
-  <mat-drawer-content>
-    <!-- Ana içerik buraya gelecek -->
-    <app-read></app-read>
-  </mat-drawer-content>
+<mat-drawer-container class="customer-container">
+  <mat-drawer mode="side" class="customer-left" opened>
+    <app-create></app-create>
+  </mat-drawer>
+  <mat-drawer-content><app-read></app-read></mat-drawer-content>
 </mat-drawer-container>

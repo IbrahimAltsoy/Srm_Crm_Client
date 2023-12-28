@@ -5,9 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
 })
-export class LayoutComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+export class LayoutComponent  {
+
   }
 
-}
+
