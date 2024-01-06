@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClientService } from '../common/http-client.service';
 import { List_Customer } from 'src/app/contracts/customers/list_customer';
-import { Observable, lastValueFrom } from 'rxjs';
+import { Observable, firstValueFrom, lastValueFrom } from 'rxjs';
 import { Create_Customer } from 'src/app/contracts/customers/Create_Customer';
 import { HttpErrorResponse } from '@angular/common/http';
 
@@ -44,6 +44,11 @@ create(customer: Create_Customer, successCallBack?: (result) => void, errorCallB
 
   }
 
-
+  async delete(id:string,successCallBack?: () => void, errorCallBack?: (errorMessage:string) => void){
+    const deleteObservable: Observable<any>= this.httpclient.delete<any>({
+       controller: "customers",
+     },id);
+     await firstValueFrom(deleteObservable);
+}
 
 }

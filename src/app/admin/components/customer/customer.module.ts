@@ -12,6 +12,8 @@ import { ReadComponent } from './read/read.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CreateComponent } from './create/create.component';
 import {MatInputModule} from '@angular/material/input';
+import { DialogModule } from '@angular/cdk/dialog';
+import { DeleteModule } from 'src/app/directives/admin/delete.module';
 @NgModule({
   declarations: [
     CustomerComponent,ReadComponent,CreateComponent
@@ -19,8 +21,15 @@ import {MatInputModule} from '@angular/material/input';
   imports: [
     CommonModule,MatTableModule,RouterModule.forChild([
       {path:"", component: CustomerComponent}
-    ]),MatIconModule, MatPaginatorModule,MatButtonModule,MatFormFieldModule,
-    MatSelectModule,MatSidenavModule,MatInputModule
+    ]),MatIconModule,
+     MatPaginatorModule,
+     MatButtonModule,
+     MatFormFieldModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatInputModule,
+    DialogModule,
+    DeleteModule
 
   ]
 })
