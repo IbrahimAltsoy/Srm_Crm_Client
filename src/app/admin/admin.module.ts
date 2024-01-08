@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LayoutModule } from './layout/layout.module';
 import { ComponentsModule } from './components/components.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -15,7 +16,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 
   ],
   imports: [
-    CommonModule,LayoutModule,ComponentsModule,MatSidenavModule
+    CommonModule,
+    LayoutModule,
+    ComponentsModule,
+    MatSidenavModule,
+    MatButtonModule
   ]
 })
 export class AdminModule { }

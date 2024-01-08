@@ -6,11 +6,16 @@ import { CustomerModule } from './customer/customer.module';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
 
+
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,UserModule,DashboardModule,
-    CustomerModule,MatSidenavModule
+    CommonModule,
+    UserModule,
+    DashboardModule,
+    CustomerModule,
+    MatSidenavModule
+
   ]
 })
 export class ComponentsModule { }

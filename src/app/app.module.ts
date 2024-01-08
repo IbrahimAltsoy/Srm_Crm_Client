@@ -8,7 +8,7 @@ import { AdminModule } from './admin/admin.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent
@@ -22,7 +22,9 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     NgbModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
+
   ],
   providers: [{ provide: 'baseUrl', useValue: 'https://localhost:8080/api', multi: true }],
   bootstrap: [AppComponent]
