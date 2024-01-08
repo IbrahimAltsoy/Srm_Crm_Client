@@ -6,6 +6,7 @@ import { DialogPosition, MatDialog } from '@angular/material/dialog';
 })
 export class DialogService {
 
+
   constructor(private dialog: MatDialog) { }
   openDialog(dialogParameters: Partial<DialogParameters>): void {
     const dialogRef = this.dialog.open(dialogParameters.componentType, {
@@ -19,6 +20,10 @@ export class DialogService {
       if (result == dialogParameters.data)
         dialogParameters.afterClosed();
     });
+    // dialogRef.afterClosed().subscribe(() => {
+    //   dialogParameters.afterClosed();
+    // });
+
   }
 
 }
@@ -35,3 +40,4 @@ export class DialogOptions {
   height?: string;
   position?: DialogPosition;
 }
+

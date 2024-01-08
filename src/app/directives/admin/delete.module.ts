@@ -10,3 +10,11 @@ import { DeleteDirective } from './delete.directive';
 
 })
 export class DeleteModule { }
+
+
+// @NgModule({
+//   declarations: [DeleteDirective],
+//   exports:[DeleteDirective]
+
+// })
+// export class DeleteModule { }

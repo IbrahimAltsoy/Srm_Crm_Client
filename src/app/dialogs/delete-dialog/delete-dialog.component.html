@@ -1,15 +1,13 @@
-<h1 mat-dialog-title>Dikkat!</h1>
+ <h1 mat-dialog-title>Dikkat!!!</h1>
 <div mat-dialog-content>
-  <p>Silmek istediğinize emin misiniz?</p>
+  <p>Silmek istediğinizden emin misiniz?</p>
+
 </div>
-<!-- <mat-dialog-actions>
-  <button mat-button (click)="close()">İptal</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Evet</button>
-</mat-dialog-actions> -->
 <div mat-dialog-actions>
-  <!-- <button mat-button (click)="close()">İptal</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Evet</button> -->
-
+  <button mat-button [mat-dialog-close]="data" style="color: red;">Evet</button>
+  <button mat-button (click)="close()" cdkFocusInitial style="color: rgb(27, 151, 173);">İptal</button>
 
 </div>
+
+
 

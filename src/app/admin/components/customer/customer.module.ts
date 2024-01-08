@@ -14,14 +14,21 @@ import { CreateComponent } from './create/create.component';
 import {MatInputModule} from '@angular/material/input';
 import { DialogModule } from '@angular/cdk/dialog';
 import { DeleteModule } from 'src/app/directives/admin/delete.module';
+import { DeleteDirective } from 'src/app/directives/admin/delete.directive';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dialog.component';
+
 @NgModule({
   declarations: [
-    CustomerComponent,ReadComponent,CreateComponent
+    CustomerComponent,ReadComponent,CreateComponent,DeleteDialogComponent
   ],
   imports: [
-    CommonModule,MatTableModule,RouterModule.forChild([
+    CommonModule,
+    MatTableModule
+    ,RouterModule.forChild([
       {path:"", component: CustomerComponent}
-    ]),MatIconModule,
+    ]),
+    MatIconModule,
      MatPaginatorModule,
      MatButtonModule,
      MatFormFieldModule,
@@ -29,7 +36,10 @@ import { DeleteModule } from 'src/app/directives/admin/delete.module';
     MatSidenavModule,
     MatInputModule,
     DialogModule,
+    MatDialogModule,
     DeleteModule
+
+
 
   ]
 })
