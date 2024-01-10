@@ -9,6 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
+import { JwtModule } from '@auth0/angular-jwt';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -23,7 +25,14 @@ import { MatButtonModule } from '@angular/material/button';
     NgbModule,
     RouterModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter:()=> localStorage.getItem("accessToken"),
+        allowedDomains:["localhost:7201"]
+      }
+    })
+
 
   ],
   providers: [{ provide: 'baseUrl', useValue: 'https://localhost:8080/api', multi: true }],
