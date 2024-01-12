@@ -12,6 +12,7 @@ export class AuthService {
   // const decodetoken = this.jwtHelperService.decodeToken(token);
   const expirationDate:Date = this.jwtHelperService.getTokenExpirationDate(token);
   let expired: boolean;
+
   try{
 expired = this.jwtHelperService.isTokenExpired(token);
 
