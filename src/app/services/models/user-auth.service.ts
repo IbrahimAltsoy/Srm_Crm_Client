@@ -20,6 +20,7 @@ export class UserAuthService {
 
       localStorage.setItem("accessToken", tokenResponse.token.accessToken)
       localStorage.setItem("refreshToken", tokenResponse.token.refreshToken)
+
     }
     callBack();
   }
@@ -44,6 +45,14 @@ export class UserAuthService {
 
 
           }
+  async passwordReset(email: string, callBack?: () => void) {
+            const observable: Observable<any> = this.httpClient.post({
+              controller: "auth",
+              action: "password-reset"
+            }, { email: email });
 
+            await firstValueFrom(observable);
+            callBack();
+          }
   }
 
