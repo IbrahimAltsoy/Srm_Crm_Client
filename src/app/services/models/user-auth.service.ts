@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClientService } from '../common/http-client.service';
 import { Observable, firstValueFrom } from 'rxjs';
 import { TokenResponse } from 'src/app/contracts/token/tokenResponse';
+import { SocialUser } from '@abacritt/angularx-social-login';
 
 @Injectable({
   providedIn: 'root'
@@ -66,5 +67,23 @@ export class UserAuthService {
     callBack();
     return state;
   };
+
+
+  async googleLogin(user: SocialUser, succesBack?:()=>void, callBack?:()=>void):Promise<any>{
+    const observable: Observable<SocialUser | TokenResponse> = this.httpClient.post<SocialUser | TokenResponse>({
+      action: "google-login",
+      controller: "auth"
+    }, user);
+
+
+    const tokenResponse: TokenResponse = await firstValueFrom(observable) as TokenResponse;
+    if(tokenResponse){
+      localStorage.setItem("accessToken", tokenResponse.token.accessToken);
+      localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
+
+    }
+   // callBack();
+
+  }
   }
 

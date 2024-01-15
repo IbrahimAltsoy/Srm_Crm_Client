@@ -1,19 +1,23 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
 import { RouterModule } from '@angular/router';
+import { GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
 
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+   // LoginComponent
   ],
   imports: [
-    CommonModule,RouterModule.forChild([
+    CommonModule,
+    GoogleSigninButtonModule,
+    RouterModule.forChild([
       {path: "", component: LoginComponent}
     ])
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class LoginModule { constructor(){
 

@@ -19,7 +19,7 @@ import { UpdatePasswordModule } from './update-password/update-password.module';
     ContactModule,
     CustomerModule,
     HomeModule,
-    LoginModule,
+    // LoginModule,
     RegisterModule,
     PasswordResetModule,
     UpdatePasswordModule
