@@ -1,3 +1,4 @@
+import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/models/auth.service';
@@ -12,7 +13,17 @@ import { UserService } from 'src/app/services/models/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent{
-  constructor(private authService:AuthService,private authUserService: UserAuthService,private activatedRoute:ActivatedRoute,private router:Router){}
+  constructor(private authService:AuthService,private authUserService: UserAuthService,private activatedRoute:ActivatedRoute,private router:Router,private socialAuthService: SocialAuthService){
+    this.socialAuthService.authState.subscribe(async(user:SocialUser)=>{
+      console.log(user);
+
+       await this.authUserService.googleLogin(user, ()=>{
+        this.authService.identityCheck()
+
+      });
+
+        })
+  }
 
   async login(usernameOrEmail:string, password:string, callback?:()=>void){
    await this.authUserService.login(usernameOrEmail,password, ()=>{

@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SF03_CRM';
+
 }
 
 // $.get("https://localhost:8080/api/Customers?Page=5&Size=10", (datas: any)=>{
