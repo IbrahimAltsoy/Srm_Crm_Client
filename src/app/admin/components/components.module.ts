@@ -4,6 +4,8 @@ import { UserModule } from './user/user.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { CustomerModule } from './customer/customer.module';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { RequestModule } from './request/request.module';
+import { EmployeModule } from './employe/employe.module';
 
 
 
@@ -13,8 +15,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     CommonModule,
     UserModule,
     DashboardModule,
-    CustomerModule,
-    MatSidenavModule
+    MatSidenavModule,
+    // RequestModule,
+    // EmployeModule,
+    // CustomerModule
 
   ]
 })

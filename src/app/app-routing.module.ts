@@ -10,6 +10,8 @@ const routes: Routes = [
       {path:"",component:DashboardComponent},
       {path:"customer", loadChildren:()=>import("./admin/components/customer/customer.module").then(module=> module.CustomerModule)},
       {path:"user", loadChildren:()=>import("./admin/components/user/user.module").then(module=> module.UserModule)},
+      {path:"employe", loadChildren:()=>import("./admin/components/employe/employe.module").then(module=> module.EmployeModule)},
+      {path:"request", loadChildren:()=>import("./admin/components/request/request.module").then(module=> module.RequestModule)}
 
 
 ]},

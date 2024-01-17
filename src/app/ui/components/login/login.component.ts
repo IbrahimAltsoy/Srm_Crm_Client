@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/models/auth.service';
 import { UserAuthService } from 'src/app/services/models/user-auth.service';
-import { UserService } from 'src/app/services/models/user.service';
+
 
 
 // appmpdule.ts dosyasına Jwt helper den kd bloğu eklendi, kontrol et
