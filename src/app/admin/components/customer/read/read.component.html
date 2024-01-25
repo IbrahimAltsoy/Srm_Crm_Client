@@ -40,11 +40,19 @@
     </ng-container>
 
 
-    <ng-container matColumnDef="update">
+    <!-- <ng-container matColumnDef="update">
       <th mat-header-cell *matHeaderCellDef> Update </th>
       <td mat-cell *matCellDef="let element"> <button mat-mini-fab color="accent" style="height: 25px; width: 25px;"><mat-icon>update</mat-icon></button></td>
-    </ng-container>
+    </ng-container> -->
 
+<ng-container matColumnDef="update">
+  <th mat-header-cell *matHeaderCellDef> Update </th>
+  <td mat-cell *matCellDef="let element">
+    <button mat-mini-fab color="accent" style="height: 25px; width: 25px;" (click)="navigateToUpdate(element.id)">
+      <mat-icon>update</mat-icon>
+    </button>
+  </td>
+</ng-container>
 
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -59,4 +67,13 @@
                  aria-label="Select page of periodic elements">
   </mat-paginator>
 </div>
+
+<br><br>
+<!-- create için -->
+<a class="nav-link" routerLink="/admin/customer/create">Create</a>
+
+<!-- update için -->
+<!-- <a class="nav-link" routerLink="/admin/update/:id">Update</a> -->
+
+
 

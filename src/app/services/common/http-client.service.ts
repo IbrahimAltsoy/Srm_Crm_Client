@@ -22,6 +22,10 @@ get<T>(requestParameters: Partial<RequestParameter>, id?: string): Observable<T>
   url = `${this.url(requestParameters)}${id ? `/${id}` : ""}${requestParameters.querystring?`?${requestParameters.querystring}`:""}`;
   return this.httpclient.get<T>(url, {headers:requestParameters.headers})
 }
+getBy<T>(url: string, id?: string): Observable<T>{
+  const fullUrl = `${url}${id}`;
+  return this.httpclient.get<T>(fullUrl);
+}
 
 //
 // post<T>(requestParameters: Partial<RequestParameter>, body: Partial<T>) :Observable<T>{

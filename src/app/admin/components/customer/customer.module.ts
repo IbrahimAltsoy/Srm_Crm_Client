@@ -17,10 +17,13 @@ import { DeleteModule } from 'src/app/directives/admin/delete.module';
 import { DeleteDirective } from 'src/app/directives/admin/delete.directive';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dialog.component';
+import { UpdateComponent } from './update/update.component';
+// import { CustomerRoutingModule } from './customer-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    CustomerComponent,ReadComponent,CreateComponent,DeleteDialogComponent
+    CustomerComponent,ReadComponent,CreateComponent,DeleteDialogComponent,UpdateComponent
   ],
   imports: [
     CommonModule,
@@ -37,9 +40,10 @@ import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dial
     MatInputModule,
     DialogModule,
     MatDialogModule,
-    DeleteModule
+    DeleteModule,
+    ReactiveFormsModule
 
-
+    // CustomerRoutingModule,
 
   ]
 })

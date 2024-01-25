@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { List_Customer } from 'src/app/contracts/customers/list_customer';
 import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dialog.component';
 import { DialogService } from 'src/app/services/common/dialog.service';
@@ -13,7 +14,7 @@ declare var $:any;
   styleUrls: ['./read.component.css']
 })
 export class ReadComponent {
-  constructor(private customerService: CustomerService,private dialogService:DialogService){}
+  constructor(private customerService: CustomerService,private dialogService:DialogService,private router:Router){}
   displayedColumns: string[] = ['no','identityNumber', 'companyName', 'delete', 'update'];
   dataSource: MatTableDataSource<List_Customer>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -35,6 +36,14 @@ this.customerService.delete(id);
     async ngOnInit() {
 
   await this.getCustomers();
+
+    }
+    navigateToUpdate(id: string) {
+      // Butona tıklandığında UpdateComponent'e yönlendir
+   this.customerService.getId(id);
+
+    this.router.navigate(['/admin/update', id]);
+
 
     }
 

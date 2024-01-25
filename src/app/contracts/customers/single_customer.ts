@@ -1,6 +1,5 @@
-export class List_Customer{
+export class Single_Customer{
   id:string;
-  // no?:number;
   identityNumber:string;
   companyName:string;
 }

@@ -1,0 +1,22 @@
+<div class="mat-elevation-z8">
+  <form [formGroup]="customerForm">
+    <mat-form-field>
+      <input matInput placeholder="id" formControlName="id">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Company Name" formControlName="companyName">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Identity Number" formControlName="identityNumber">
+    </mat-form-field>
+
+
+
+    <!-- Diğer müşteri bilgileri için gerekli alanları ekleyin -->
+
+ <button mat-raised-button color="primary" (click)="updateCustomer()">Update Customer</button>
+  </form>
+</div>
+
